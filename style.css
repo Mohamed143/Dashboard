@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 950px) {
+    .container .left {
+        max-width: 70px;
+        width: 100%;
+    }
+    .container .right {
+        background-color: white;
+    }
+    .container .left #close {
+        display: block;
+    }
+    .container .left #open {
+        display: none;
+    }
+    .container .left:hover {
+        max-width: 200px;
+        width: 100%;
+    }
+    .container .left:hover #close {
+        display: none;
+    }
+    .container .left:hover #open {
+        display: block;
+    }
+    .left ul li a p {
+        visibility: hidden;
+        /* display: none; */
+        margin-left: -130px;
+    }
+    .left:hover ul li a p {
+        visibility: visible;
+        /* display: none; */
+    }
+    
+  }
+
+#close {
+    display: none;
+}
+#check {
+    display: none;
+}
+.left ul {
+    position: fixed;
+    margin-top: 60px;
+}
+
+.left ion-icon {
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    transition: 200ms ease-in;
+}
+
+.left {
+    background-color: blueviolet;
+    max-width: 200px;
+    width: 100%;
+    transition: 200ms ease-in;
+}
+.right {
+    background-color: brown;
+    width: 100%;
+}
+#check:checked ~ .container .left {
+    max-width: 70px;
+    width: 100%;
+}
+#check:checked ~ .container .left #close {
+    display: block;
+}
+#check:checked ~ .container .left #open {
+    display: none;
+}
+#check:checked ~ .container .left ul li a p {
+    display: none;
+}
+.left ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.left ul li a p {
+    font-size: large;
+    padding-left: 10px;
+    padding-top: 5px;
+    transition: 200ms ease-in;
+}
+.left ul li {
+    margin-top: 40px;
+}
